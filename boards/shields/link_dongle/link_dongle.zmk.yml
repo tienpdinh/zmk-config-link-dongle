@@ -1,0 +1,7 @@
+file_format: "1"
+id: link_dongle
+name: Link Dongle
+type: shield
+url: https://cannonkeys.com/
+features:
+  - display

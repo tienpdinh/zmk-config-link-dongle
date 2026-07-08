@@ -1,0 +1,18 @@
+# Copyright (c) 2026 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_LINK_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Link Dongle"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+endif # SHIELD_LINK_DONGLE

@@ -1,0 +1,26 @@
+manifest:
+  defaults:
+    revision: v0.3
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: cannonkeys
+      url-base: https://github.com/cannonkeys
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      import: app/west.yml
+    # CannonKeys module: provides the link / link_left / link_right boards.
+    # Pinned to the main commit that contains the fixed physical-layout order
+    # (matches the layout vendored into the link_dongle shield).
+    - name: zmk-cannonkeys-keyboards
+      remote: cannonkeys
+      revision: 0b6f02193686573e78a7cb1d6fd768bcf53241d0
+    # Dongle status screen: per-peripheral battery gauges, layer, modifiers, output
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
+  self:
+    path: config
